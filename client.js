@@ -13,6 +13,12 @@ const connect = function () {
       console.log(data);
     });
 
+    conn.on("connect", () => {
+      console.log('You are connected!');
+      conn.write('Name: TRINA');
+
+    });
+
   };
 
   return conn;
