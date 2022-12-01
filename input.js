@@ -4,7 +4,7 @@ const handleUserInput = function (key) {
   if (key === '\u0003') {
     process.exit();
   }
-  if (key === 'w'){
+  if (key === 'w') {
     console.log("you pressed W");
     conn.write('Move: up');
   }
@@ -19,6 +19,14 @@ const handleUserInput = function (key) {
   if (key === 'a') {
     console.log("you pressed A");
     conn.write('Move: left');
+  }
+  if (key === 'h') {
+    console.log("message");
+    conn.write('Say: Get our of my way');
+  }
+  if (key === 'y') {
+    console.log('message2');
+    conn.write('Say: I will get you');
   }
   console.log("key", key)
 };
