@@ -8,6 +8,18 @@ const handleUserInput = function (key) {
     console.log("you pressed W");
     conn.write('Move: up');
   }
+  if (key === 's') {
+    console.log("you pressed S");
+    conn.write('Move: down');
+  }
+  if (key === 'd') {
+    console.log("you pressed D");
+    conn.write('Move: right');
+  }
+  if (key === 'a') {
+    console.log("you pressed A");
+    conn.write('Move: left');
+  }
   console.log("key", key)
 };
 const setupInput = function (connection) {
