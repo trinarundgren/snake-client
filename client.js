@@ -7,21 +7,21 @@ const connect = function () {
   });
 
   // interpret incoming data as text
-  conn.setEncoding("utf8"); {
+  conn.setEncoding("utf8");
 
-    conn.on("data", (data) => {
-      console.log(data);
-    });
+  conn.on('connect', () => {
+    console.log('You are connected!');
+    conn.write('Name: TCR');
+    conn.write('Move: up');
+  });
 
-    conn.on("connect", () => {
-      console.log('You are connected!');
-      conn.write('Name: TRINA');
-
-    });
-
-  };
+  conn.on("data", (data) => {
+    console.log(data);
+   
+  });
 
   return conn;
+
 };
 
 module.exports = { connect };
